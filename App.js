@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, Text, TextInput } from 'react-native';
+import { View, StyleSheet, Text, TextInput, Image } from 'react-native';
 
 export default class mimimi extends Component {
   render() {
@@ -11,7 +11,9 @@ export default class mimimi extends Component {
         <TextInput style={styles.input} placeholder="Digite aqui seu mimimi ..." />
       </View>
       <View style={styles.area}>
-
+        <Text style={[styles.texto, styles.texto1]}>Texto 1 Exemplo</Text>
+        <Image style={styles.guri} source={require('./images/mimimi.jpg')} />
+        <Text style={[styles.texto, styles.texto2]}>Texto 2 Exemplo</Text>
       </View>
     </View>
   }
@@ -40,5 +42,32 @@ const styles = StyleSheet.create({
     height: 40,
     margin: 20,
     padding: 10
-  }
+  },
+  area: {
+    width: 300,
+    height: 300,
+    marginTop: 10
+  },
+  guri: {
+    width: 300,
+    height: 300,
+    marginTop: -70,
+    zIndex: 0
+  },
+  texto: {
+    fontSize: 25,
+    color: '#FFFFFF',
+    padding: 10,
+    backgroundColor: 'transparent',
+    fontWeight: 'bold',
+    textAlign: 'center',
+    height: 70
+  },
+  texto1: {
+    zIndex: 1,
+
+  },
+  texto2: {
+    zIndex: 1,
+  },
 });
